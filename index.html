@@ -73,5 +73,15 @@
     <div class="footer">
         <p>&copy; 2025 Ignacio M. López</p>
     </div>
+    <script>
+document.querySelectorAll('nav ul li a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
 </body>
 </html>
