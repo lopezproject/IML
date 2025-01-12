@@ -1,31 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Landing Page</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Selection</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #1a1a1a;
+            color: white;
+            overflow: hidden;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            width: 100%;
+            height: 100%;
+        }
+
+        .frame {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #333;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .frame:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+        }
+
+        .frame img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%) brightness(50%);
+            transition: filter 0.3s ease;
+        }
+
+        .frame:hover img {
+            filter: grayscale(0%) brightness(100%);
+        }
+
+        .frame p {
+            position: absolute;
+            bottom: 10%;
+            width: 80%;
+            text-align: center;
+            font-size: 1.2rem;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-  <h1>Select Your Character</h1>
-  <div class="grid-container">
-    <div class="frame" data-description="Frame 1 Description">
-      <img src="https://preview.redd.it/ueiam9zbf2ld1.jpeg?auto=webp&s=515162104a225fd376e2e933aff552d1ff259c81" alt="Frame 1">
-      <p>Frame 1 Description</p>
+    <h1>Choose Your Character</h1>
+    <div class="grid-container">
+        <div class="frame">
+            <img src="image1.jpg" alt="Character 1">
+            <p>Character 1 Description</p>
+        </div>
+        <div class="frame">
+            <img src="image2.jpg" alt="Character 2">
+            <p>Character 2 Description</p>
+        </div>
+        <div class="frame">
+            <img src="image3.jpg" alt="Character 3">
+            <p>Character 3 Description</p>
+        </div>
+        <div class="frame">
+            <img src="image4.jpg" alt="Character 4">
+            <p>Character 4 Description</p>
+        </div>
     </div>
-    <div class="frame" data-description="Frame 2 Description">
-      <img src="https://via.placeholder.com/400x400" alt="Frame 2">
-      <p>Frame 2 Description</p>
-    </div>
-    <div class="frame" data-description="Frame 3 Description">
-      <img src="https://via.placeholder.com/400x400" alt="Frame 3">
-      <p>Frame 3 Description</p>
-    </div>
-    <div class="frame" data-description="Frame 4 Description">
-      <img src="https://via.placeholder.com/400x400" alt="Frame 4">
-      <p>Frame 4 Description</p>
-    </div>
-  </div>
-  <script src="script.js"></script>
 </body>
 </html>
