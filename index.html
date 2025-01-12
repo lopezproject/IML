@@ -20,7 +20,7 @@
         </nav>
     </div>
     <div class="section" id="acerca-de">
-        <img src="coolcat.jpg" alt="Foto de presentación">
+        <img src="your-image.jpg" alt="Your Image">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vehicula dapibus velit, a tincidunt nisl sollicitudin ut.</p>
     </div>
     <div class="section" id="blog">
@@ -73,15 +73,17 @@
     <div class="footer">
         <p>&copy; 2025 Ignacio M. López</p>
     </div>
+
     <script>
-document.querySelectorAll('nav ul li a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+        // Smooth scrolling for nav links
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
         });
-    });
-});
-</script>
+    </script>
 </body>
 </html>
