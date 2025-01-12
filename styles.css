@@ -51,15 +51,20 @@ nav ul li a {
     justify-content: space-between; /* Distribute space equally */
 }
 
+#acerca-de .box {
+    flex: 1; /* Allow the boxes to take up equal space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #acerca-de img {
     max-width: 100px;
     max-height: 100px;
-    flex: 1; /* Allow the image to take up equal space */
 }
 
 #acerca-de p {
-    flex: 1; /* Allow the paragraph to take up equal space */
-    margin-left: 20px; /* Add some space between the image and the text */
+    margin: 0; /* Remove default margin */
 }
 
 /* Blog carousel styles */
