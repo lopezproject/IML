@@ -1,128 +1,71 @@
-/* General styles */
-body {
-    font-family: 'Arial', sans-serif;
+/* General Styles */
+body, html {
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, black, black 90%, white 100%);
-    color: white;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.header {
+.container {
     text-align: center;
-    padding: 20px;
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 3em;
+    margin-bottom: 20px;
 }
 
-h2 {
-    font-size: 30px;
+.frame {
+    display: inline-block;
+    position: relative;
+    width: 25%;
+    height: 50vh;
+    transform: rotate(45deg);
+    overflow: hidden;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+.diamond {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    overflow: hidden;
 }
 
-nav ul li {
-    margin: 0 15px;
+.diamond img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) brightness(50%);
+    transition: filter 0.3s ease, box-shadow 0.3s ease;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
+.diamond img:hover {
+    filter: grayscale(0%) brightness(100%);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
 }
 
-.section {
-    height: calc(100vh / 6);
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Specific styles for the "acerca de" section */
-#acerca-de {
-    display: flex;
-    justify-content: space-between; /* Distribute space equally */
-}
-
-#acerca-de .box {
-    flex: 1; /* Allow the boxes to take up equal space */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#acerca-de img {
-    max-width: 100px;
-    max-height: 100px;
-}
-
-#acerca-de p {
-    margin: 0; /* Remove default margin */
-}
-
-/* Blog carousel styles */
-#blog .carousel {
-    display: flex;
-    overflow-x: auto;
-}
-
-#blog .post {
-    margin: 0 10px;
+.diamond p {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
     text-align: center;
+    font-size: 1.2em;
+    color: #fff;
+    transform: rotate(45deg);
 }
 
-/* Social icons styles */
-#otras-redes .social-icons {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-}
-
-#otras-redes .social-icons li {
-    margin: 0 10px;
-}
-
-/* Contact form styles */
-#contacto form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#contacto label {
-    margin: 10px 0 5px;
-}
-
-#contacto input, #contacto textarea {
-    width: 80%;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-#contacto button {
-    padding: 10px 20px;
-    background-color: white;
-    color: black;
-    border: none;
-    cursor: pointer;
-}
-
-/* Footer styles */
-.footer {
-    text-align: center;
-    padding: 10px;
-    background-color: black;
-    color: white;
-}
-
-.footer p {
-    margin: 0;
+@media (max-width: 768px) {
+    .frame {
+        width: 50%;
+        height: 25vh;
+    }
 }
