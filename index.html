@@ -32,26 +32,31 @@
         }
 
         .grid-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
             width: 100%;
             height: 100%;
+            padding: 10px;
         }
 
         .frame {
             position: relative;
+            width: 80%;
+            aspect-ratio: 2 / 1;
             overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
             background-color: #333;
-            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+            margin: 10px 0;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .frame:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
         }
 
@@ -71,7 +76,7 @@
         .frame p {
             position: absolute;
             bottom: 10%;
-            width: 80%;
+            width: 90%;
             text-align: center;
             font-size: 1.2rem;
             background: rgba(0, 0, 0, 0.6);
@@ -102,3 +107,4 @@
     </div>
 </body>
 </html>
+
