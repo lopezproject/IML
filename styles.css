@@ -1,3 +1,4 @@
+/* Existing styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -44,11 +45,24 @@ nav ul li a {
     justify-content: center;
 }
 
-#acerca-de img {
-    max-width: 50%;
-    margin-right: 20px;
+/* Specific styles for the "acerca de" section */
+#acerca-de {
+    display: flex;
+    justify-content: space-between; /* Distribute space equally */
 }
 
+#acerca-de img {
+    max-width: 100px;
+    max-height: 100px;
+    flex: 1; /* Allow the image to take up equal space */
+}
+
+#acerca-de p {
+    flex: 1; /* Allow the paragraph to take up equal space */
+    margin-left: 20px; /* Add some space between the image and the text */
+}
+
+/* Blog carousel styles */
 #blog .carousel {
     display: flex;
     overflow-x: auto;
@@ -59,6 +73,7 @@ nav ul li a {
     text-align: center;
 }
 
+/* Social icons styles */
 #otras-redes .social-icons {
     display: flex;
     justify-content: center;
@@ -70,6 +85,7 @@ nav ul li a {
     margin: 0 10px;
 }
 
+/* Contact form styles */
 #contacto form {
     display: flex;
     flex-direction: column;
@@ -94,6 +110,7 @@ nav ul li a {
     cursor: pointer;
 }
 
+/* Footer styles */
 .footer {
     text-align: center;
     padding: 10px;
